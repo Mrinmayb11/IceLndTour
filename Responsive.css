@@ -1,0 +1,366 @@
+/* ----------- Tablets/Ipads --------------*/
+
+@media screen and (max-width:1024px) {
+    
+    /* ----- Nav ---- */
+    nav{
+        margin: 0 5em;
+    }
+    /* --------- Main-Section ---------- */
+    .item:nth-child(2){
+        left: 55%;
+    }.item:nth-child(3){
+        left: calc(55% + 200px);
+    }.item:nth-child(4){
+        left: calc(55% + 400px);
+    }
+    .item{
+        height: 240px;
+        width: 171.43px;
+        top: 70%;
+        bottom: 10px;
+    }
+    .item .content{
+        top: 37%;
+        left: 10%;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.1rem !important;
+    }
+    #next{
+        top: 35%;
+        background: transparent;
+        backdrop-filter: blur(20px);
+    }
+        /* --------- Adventure-Section ---------- */
+
+    .large-img{
+        width: 480px;
+    }
+    .medium-img{
+        width: 285px;
+    }
+    .small-img{
+        width: 206px;
+    }
+    .adventure-content{
+        padding: 0 4em;
+    }
+    .h3-small{
+        font-size: 1.4rem
+    }
+    h2{
+        font-size: 3rem !important;
+    }
+
+    /* ----------- Why Choose Us Section -----------*/
+     .features-imgs{
+        height: 430px;
+     }
+
+
+     /* ----------- Destination Section -----------*/
+
+    .destination-content{
+        gap: 4em;
+    }
+    .destination-img{
+     
+        height: 280px;
+    }
+    .destination-content .h3-big{
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+
+        /* ----------- Footer Section -----------*/
+
+}
+
+@media screen and (max-width:840px) {
+    .item:nth-child(2){
+        left: 50%;
+    }.item:nth-child(3){
+        left: calc(50% + 200px);
+    }.item:nth-child(4){
+        left: calc(50% + 400px);
+    }
+    nav{
+        margin: 0 3em;
+    }
+    .large-img{
+        width: 525px;
+    }
+    .medium-img{
+        width: 262.5px;
+    }
+    .small-img{
+        width: 262.5px;
+        aspect-ratio:3/2 !important;
+    }
+    .h3-small{
+        font-size: 2.3rem;
+    }
+    .adventure-content{
+        padding-bottom: 4em;
+        padding-top: 2em;
+    }
+    #img-slider-container-1{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #img-slider-container-2{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #next-1 {
+        position: absolute;
+        bottom: -4em;
+        right: 45%;
+        border-radius: 6px;
+        border: 1px solid #555;
+        transition: 0.5s;
+        z-index: 2;
+        padding: 0;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+      }
+      .second-next{
+        padding: 0.3em 0.6em !important;
+        color: white;
+        font-size: 1.2rem;
+
+      }
+
+
+
+
+    .Destinations-Section{
+        padding: 0 7em;
+        align-items: flex-start;
+    }
+    .destination-content:nth-child(1),.destination-content:nth-child(3){
+        flex-direction: column;
+    }
+    .destination-content:nth-child(2),.destination-content:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .destination-content{
+        gap: 2.5em;
+    }
+    .destination-img{
+        height: 350px;
+    }
+    .destination-container{
+        gap: 6em;
+    }
+
+
+
+
+    #HighLands-Section h1{
+        left: 0.9em;
+    }
+}
+
+
+@media screen and (max-width:630px) {
+    nav{
+        align-items: flex-start !important;
+
+    }
+    .fa-bars{
+        display: block !important;
+        position: relative;
+        z-index: 100;
+    }
+    #logo{
+        z-index: 100;
+    }
+    #nav-items{
+        flex-direction: column;
+        position: absolute;
+        left: 0%;
+        top: 30%;
+        display: none;
+        height: 70vh;
+        backdrop-filter: blur(20px);
+        width: 80vw;
+    }
+    .show-menu{
+        display: flex !important;
+    }
+    /* --------- Adventure Section ---------- */
+    .item .des{
+        width: 44ch;
+    }
+    .large-img{
+        width: 450px;
+    }
+    .medium-img, .small-img{
+        width: 210px;
+    }
+
+    .Destinations-Section{
+        align-items: center;
+    }
+    .destination-container{
+        gap: 4em;
+    }
+    .destination-img{
+        height: 280px;
+    }
+
+    h2{
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .h3-small{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .item .des{
+        width: 35ch;
+    }
+    .large-img{
+        width: 400px;
+    }
+    .medium-img, .small-img{
+        width: 180px;
+    }
+
+    .item{
+        height:200px;
+        width: 142.86px;
+    }
+    .destination-container{
+        gap: 4em;
+    }
+    .destination-img{
+        height: 240px;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+
+    #HighLands-Section h1{
+        top: 10%;
+        left: 13%;
+    }
+    #HighLands-Section p{
+        left: 13%;
+    }
+
+    #next{
+        backdrop-filter: none;
+        right: 10px;
+        width: 30px;
+        height: 50px;
+    }
+    .second-next{
+        backdrop-filter: blur(10px);
+        background: transparent;
+        padding:0.4em;
+
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+
+
+    h2{
+        font-size: 2.6rem !important;
+    }
+
+    .item .des{
+        width: 29ch;
+    }
+
+
+
+
+    .item:nth-child(2){
+        left: 40%;
+    }.item:nth-child(3){
+        left: calc(40% + 180px);
+    }.item:nth-child(4){
+        left: calc(40% + 360px);
+    }
+
+    .large-img{
+        width: 320px;
+    }
+    .medium-img, .small-img{
+        width: 150px;
+    }
+    .h3-big{
+        font-size: 2.8rem;
+    }
+    .h3-medium,.h3-small{
+        font-size: 1.3rem;
+    }
+    .Transparent-bg-2{
+        padding: 1em 0 1.2em 1.2em;
+    }
+    .Transparent-bg-2 p{
+        width: 25ch;
+    }
+    .destination-container{
+        gap: 4em;
+    }
+    .destination-img{
+        height: 180px;
+    }
+
+
+
+}
+
+@media screen and (max-width:350px){
+
+    nav {
+        margin: 0 2em;
+    }
+    .large-img{
+        width: 300px;
+    }
+    .medium-img, .small-img{
+        width: 140px;
+    }
+
+    .Destination-Section{
+        padding-left: 2em;
+    }
+    .destination-container{
+        gap: 4em;
+    }
+    .destination-img{
+        height: 180px;
+    }
+
+
+    #HighLands-Section p,#HighLands-Section h1{
+        left: 8%;
+    }
+
+
+    #Footer-Section{
+        padding-left: 2em;
+    }
+}

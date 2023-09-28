@@ -1,0 +1,483 @@
+/* Universal Classes */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,500&family=Playfair+Display:wght@400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #032A3E;
+    overflow-x: hidden;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: #E9E9E9;
+    line-height: 1.35;
+}
+
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #E9E9E9;
+    font-size: 5rem;
+}
+h3{
+    font-weight: 300 !important;
+}
+nav{
+    position: absolute;
+}
+.fa-bars{
+    color: white;
+    font-size: 2rem;
+    display: none;
+}
+.img-item, .slider-img, .features-imgs, .full-screen-img{
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+}
+button,a{
+    cursor: pointer;
+}
+
+
+/* --------------------------------- Nav Section ---------------------------------*/
+ 
+li,a{
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+}
+#logo{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+nav{
+    position: fixed;
+    top: 20px;
+    z-index: 1000;
+    justify-content: space-between !important;
+    width: 80vw;
+    margin: 0 10em;
+    padding: 15px 10px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 6px;
+
+}
+nav ul{
+    gap: 40px;
+}
+
+/* --------------------------------- First Section ---------------------------------*/
+
+
+
+/* ---------------- Slider-Section ---------------- */
+
+.Transparent-bg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000065;
+    z-index: 2;
+    transition: all 0.4s;
+}
+.container{
+    position: relative;
+    left:0%;
+    top:0%;
+    width:100vw;
+    height: 100vh;
+    padding:50px;
+    box-shadow: 0 30px 50px #000000;
+}
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+.item{
+    height: 350px;
+    width: 250px;
+    background-position: center;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 3;
+    top:50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow:  0 30px 50px #505050;
+    transition: all 0.4s;
+}
+.item:nth-child(1){
+    left:0;
+    top:0;
+    transform: translate(0,0);
+    border-radius: 0;
+    width:100%;
+    height:100%;
+    box-shadow: none;
+    z-index: 1;
+    transition: all 0.4s;
+}
+.item:nth-child(2){
+    left:60%;
+}
+.item:nth-child(3){
+    left:calc(60% + 330px);
+}
+.item:nth-child(4){
+    left:calc(60% + 660px);
+}
+.item .content{
+    position: absolute;
+    top:45%;
+    left:12%;
+    text-align: left;
+    padding:0;
+    color:#eee;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+}
+.item:nth-child(1) .content{
+    display: block;
+    z-index: 11111;
+}
+.item .name{
+    font-weight: 900;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 1 forwards
+}
+.item .des{
+    margin:20px 0;
+    width: 50ch;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards
+}
+.item button{
+    padding:10px 20px;
+    border:none;
+    border-radius: 6px;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.6s 1 forwards
+}
+.des{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+    }
+}
+#next{
+    width:50px;
+    height:70px;
+    border-radius: 6px;
+    border:1px solid #555;
+    transition: 0.5s;
+    z-index: 2;
+    bottom: 50px;
+    right: 50px;
+    position: absolute;
+    background: transparent;
+    backdrop-filter: blur(20px);
+}
+#next:active{
+    background-color: #000000;
+}
+  
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------- Adventure Section ---------------------------------*/
+
+ 
+/* ---------------- Adventure-Conent ---------------- */
+.sub-heading{
+    font-weight:300;
+    font-size: 4rem;
+    padding: 1.3em 0 0.7em 0;
+    display: block;
+}
+
+.slider-img{
+    transition: all 0.3s ease;
+} 
+#img-slider-container-1{
+    gap: 20px;
+    position: relative;
+}
+#img-slider-container-2{
+    align-items: flex-start;
+    gap: 20px;
+}
+#next-1{
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+.second-next{
+    padding: 1.5em 0.8em;
+    font-size: 2rem;
+    color: #032a3e83;
+}
+
+/* ---------- Dynamic Image size for smooth transition ----------  */
+
+.large-img{
+    width: 600px; aspect-ratio:3/2;
+}
+.medium-img{
+    width:360px; aspect-ratio:3/2;
+}
+.small-img{
+    width: 262px; aspect-ratio:3/1.6;
+}
+
+
+.h3-big{
+    font-size: 3.5rem;
+    line-height: 1;
+    
+}
+.h3-medium{
+    font-size: 2.3rem;
+    line-height: 1;
+    padding: 0.5em 0 0 0.5em;
+}
+.h3-small{
+    font-size: 1.5rem;
+    padding: 0.5em 0 0 0.5em;
+}
+
+.Transparent-bg-2,.Transparent-bg-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Transparent-bg-2{
+    background-color: #00000065;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+       padding: 2.5em 0 2.5em 2.5em;
+}
+.Transparent-bg-2 p{
+    font-size: 1.3rem;
+    width:35ch;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards
+
+}
+
+.Transparent-bg-3{
+    background-color: #0000001e;
+    flex-direction: column;
+}
+
+
+.display-block{
+    display: block;
+}
+.display-none{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.img-item.expanded {
+    height: 100vh;
+    aspect-ratio: auto 100%;
+    flex: 1;
+}
+.btn-img{
+    padding: 20px;
+}
+
+
+
+/* --------------------------------- Why Choose Us Section ---------------------------------*/
+
+.features-container .flex-row, .features-container{
+    gap: 20px;
+}
+.features-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px ,1fr));
+    width: 80vw;
+    margin: auto;
+}
+.features-container h4{
+    font-size: 1.4rem;
+    color:#E9E9E9;
+    font-weight: 100;
+}
+
+.features-content{
+    position: relative;
+    background-color: #00000065;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 1.4em 1.4em;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.features-imgs{
+    height: 380px;
+}
+
+/* --------------------------------- Destination Section ---------------------------------*/
+
+.Destinations-Section{
+    padding: 0 9em;
+}
+.destination-container{
+    display: flex;
+    flex-direction: column;
+    gap: 9em;
+    padding: 2em 0 6em 0
+}
+.destination-content .h3-big{
+    font-size: 2.7rem !important;
+    line-height: 1.2;
+}
+.destination-img{
+   object-fit: cover ;
+   height: 400px;
+   aspect-ratio: 12/7.5;
+   border-radius: 6px;
+}
+.destination-content{
+    align-items: flex-start;
+    gap: 6em;
+}
+.destination-content .des{
+    width: 30ch;
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding-top: 1.3em;
+}
+.destination-content .h3-small{
+    padding-top:0 !important;
+    padding-left: 0 !important;
+    padding-bottom: 1em;
+}
+
+
+
+/* --------------------------------- HighLands Section Section ---------------------------------*/
+
+#HighLands-Section{
+    background-image: url(images/D-TheHighlands.webp);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#HighLands-Section h1{
+    width: 3ch;
+    line-height: 1;
+    position: absolute;
+    top: 0.8em;
+    left: 1.3em;
+}
+#HighLands-Section p{
+    width: 30ch;
+    font-size: 1.3rem;
+    font-weight: 200;
+    position: absolute !important;
+    bottom: 4em;
+    right: 2em
+}
+#HighLands-Section h1,#HighLands-Section p{
+    position: relative;
+    z-index: 100;
+}
+
+
+li,i{
+    cursor: pointer;
+}
+li, #p{
+    color: #fff;
+    list-style-type: none;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+#Footer-Section{
+    padding: 5em 5em;
+}
+.footer-container{
+    display: grid;
+    padding-bottom: 4em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-container ul>li{
+    padding: 0.2em 0;
+}
+.main-h{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 300;  
+}
+.Last-content .flex-row{
+    gap: 30px;
+    padding-bottom: 2em;
+}
+i{
+    color: #fff;
+    font-size: 1.6rem;
+}
